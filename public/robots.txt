@@ -1,0 +1,28 @@
+# Global rules for all web crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Explicitly allow important pages for better indexing
+Allow: /jpg-to-pdf
+Allow: /pdf-to-jpg
+Allow: /about
+Allow: /privacy
+Allow: /terms
+Allow: /contact
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1
+
+# Rules for specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
