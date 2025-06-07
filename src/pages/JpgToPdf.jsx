@@ -55,10 +55,13 @@ const JpgToPdf = () => {
         });
       }, 500);
 
-      const response = await fetch("http://127.0.0.1:8000/api/jpg-to-pdf/", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://jpg-converter-backend.onrender.com/api/jpg-to-pdf/",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       clearInterval(progressInterval);
       setConversionProgress(100);

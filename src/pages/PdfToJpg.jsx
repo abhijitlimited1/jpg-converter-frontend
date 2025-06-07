@@ -73,10 +73,13 @@ const PdfToJpg = () => {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 3000);
 
-        const response = await fetch("http://127.0.0.1:8000/api/health/", {
-          method: "GET",
-          signal: controller.signal,
-        });
+        const response = await fetch(
+          "https://jpg-converter-backend.onrender.com/api/health/",
+          {
+            method: "GET",
+            signal: controller.signal,
+          }
+        );
 
         clearTimeout(timeoutId);
         setServerUnavailable(!response.ok);
@@ -288,10 +291,13 @@ const PdfToJpg = () => {
         });
       }, 300);
 
-      const response = await fetch("http://127.0.0.1:8000/api/pdf-to-jpg/", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://jpg-converter-backend.onrender.com/api/pdf-to-jpg/",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       clearInterval(progressInterval);
       setConversionProgress(100);
