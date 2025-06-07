@@ -25,4 +25,4 @@ User-agent: DuckDuckBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://convertjpgpdf.netlify.app/sitemap.xml

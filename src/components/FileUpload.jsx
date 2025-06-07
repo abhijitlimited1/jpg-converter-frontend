@@ -42,7 +42,7 @@ const FileUpload = ({ onFileChange, accept, multiple }) => {
             ? "border-blue-500 bg-blue-50 scale-102"
             : "border-gray-300 bg-gray-50 hover:bg-blue-50 hover:border-blue-300"
         }`}
-        style={{ minHeight: "120px", minHeight: "clamp(120px, 25vw, 150px)" }}
+        style={{ minHeight: "clamp(120px, 25vw, 150px)" }}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
